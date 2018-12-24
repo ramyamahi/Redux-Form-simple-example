@@ -5,6 +5,8 @@ import Add from "./Add"
 import './App.css';
 import VisibilityToggle from "./VisibilityToggle"
 import ClassSample from './ClassSample'
+import FunctionalComponent from './FunctionalComponent'
+
 
 class App extends Component {
   constructor(props){
@@ -27,6 +29,7 @@ class App extends Component {
        <Increment/>
        <Add/>
        <VisibilityToggle/>
+       <FunctionalComponent/>
        <ClassSample />
        
       </div>
