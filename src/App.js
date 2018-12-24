@@ -1,24 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Movies from "./MoviesList"
+import Increment from "./Increment"
+import Add from "./Add"
 import './App.css';
+import VisibilityToggle from "./VisibilityToggle"
+import ClassSample from './ClassSample'
 
 class App extends Component {
+  constructor(props){
+    super();
+    this.state={
+      
+    }
+  }
+
+  handleEvent(){
+    //("fgg")
+  }
+ 
   render() {
-    return (
+    
+    return (    
+      
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div>
+       <Increment/>
+       <Add/>
+       <VisibilityToggle/>
+       <ClassSample />
+       
+      </div>
+        <header>
+          {/*<h1>Movie App</h1>
+            <Movies/>*/}
+            
+              
         </header>
       </div>
     );
