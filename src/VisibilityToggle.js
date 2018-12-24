@@ -20,10 +20,11 @@ class VisibilityToggle extends Component {
       
   	<div>
         <h1>Visibility Toggle</h1>
-        <button onClick={this.toggleVisibility.bind(this)}>{this.visibility ? 'Hide details' : 'Show Details'}</button>        
-        {
-        	this.visibility && (
-        	<div>Ramya</div>)}
+        <button onClick={this.toggleVisibility.bind(this)}>{this.state.visibility ? 'Hide details' : 'Show Details'}</button>        
+        <p>{
+        	this.state.visibility && (
+        	<div>Iam Visible</div>)
+        }</p>
 	</div>
 
 
