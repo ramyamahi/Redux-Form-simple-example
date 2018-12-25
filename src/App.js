@@ -4,9 +4,9 @@ import Increment from "./Increment"
 import Add from "./Add"
 import './App.css';
 import VisibilityToggle from "./VisibilityToggle"
-import ClassSample from './ClassSample'
+import Indecision from './Indecision'
 import FunctionalComponent from './FunctionalComponent'
-
+import TodoList from './TodoList'
 
 class App extends Component {
   constructor(props){
@@ -27,10 +27,15 @@ class App extends Component {
       <div className="App">
       <div>
        <Increment/>
+       <hr/>
        <Add/>
+        <hr/>
        <VisibilityToggle/>
+        <hr/>
        <FunctionalComponent/>
-       <ClassSample />
+        <hr/>
+       {/*<Indecision />*/}
+       <TodoList/>
        
       </div>
         <header>
