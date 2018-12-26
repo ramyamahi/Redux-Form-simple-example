@@ -7,6 +7,9 @@ import VisibilityToggle from "./VisibilityToggle"
 import Indecision from './Indecision'
 import FunctionalComponent from './FunctionalComponent'
 import TodoList from './TodoList'
+import TaskDataTable from './TaskDataTable'
+import UserTable from './UserTable'
+
 
 class App extends Component {
   constructor(props){
@@ -34,9 +37,13 @@ class App extends Component {
         <hr/>
        <FunctionalComponent/>
         <hr/>
-       {/*<Indecision />*/}
+       <Indecision />
+       <hr/>
        <TodoList/>
-       
+       <hr/>
+       <TaskDataTable/>
+       <hr/>
+       <UserTable/>
       </div>
         <header>
           {/*<h1>Movie App</h1>

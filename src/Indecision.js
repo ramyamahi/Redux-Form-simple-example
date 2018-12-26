@@ -16,14 +16,12 @@ randomSelect = () => {
 handleRemoveall = () => {
 	this.setState({options: [] })
 }
-handleAdd = (option) => {
-	// e.preventdefault();
-	// const option = e.target.elements.option.values.trim();
-	// console.log(option);
-	this.setState({options:this.state.options.concat(option)})
+handleAdd = () => {
+	
+	this.setState({options:this.state.options.concat(this.option)})
 }
 getOption = (e) => {
-	var option = this.setState({options: e.target.value})
+ this.setState({options: e.target.value})
 }
 	
 render(){
@@ -34,15 +32,15 @@ render(){
 			<h5>Add and Remove options</h5>
 			<button onClick={this.randomSelect.bind(this)}>What should I do?</button>
 			<button onClick={this.handleRemoveall.bind(this)}>Remove all</button>
-			<p>
+			
 			{
-				this.state.options.map((option)=> {
-					return <li key={option}>{option}</li> 
-				})
+				this.state.options.map(option=> (
+					 <li key={option}>{option}</li> 
+				))
 			}
-			</p>
-			<form onSubmit={this.handleAdd.bind(this)}>
-			<input type='text' name='option' onChange={this.getOption.bind(this)}></input>
+			
+			<form>
+			<input type='text' onChange={this.getOption.bind(this)}></input>
 			<button onClick={this.handleAdd.bind(this)}>Add Option</button>
 			</form>
 		</div>
