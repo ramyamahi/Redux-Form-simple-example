@@ -1,40 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
+//import { Item, Button,Image, Sidebar, Grid, Header, Segment } from 'semantic-ui-react'
 
 class UserTable extends Component {
   constructor(props){
     super(props);
     this.state={
-      persons: [
-        {name: ' ',email: ' '} 
-      ],
+      persons: [],
       text:''
     };
   }  
   handleChange = (event) => {
-      this.setState({name: event.target.value})
+      var name=this.setState({name: event.target.value})
       console.log(this.name)      
   }
    handleChangeData = (event) => {
-      this.setState({email: event.target.value})
+      var email=this.setState({email: event.target.value})
       console.log(this.email)      
-  }
-  
+  } 
 
-  // onSubmit =() => {
-  //   this.setState({items: this.state.items.concat(this.state.text)});
-  // }
-  // handleClick = () => {
-  //   var text = this.setState({persons: this.state.persons.concat(this.state.name), text:' ' });
-  //   this.setState({text:text})
-  //   console.log(this.state.text)   
-  // }
-handleClick = () => {
-  var name=this.setState({name: this.state.nam})
-  console.log(this.name)      
   
-  var email=this.setState({email: ' '})
-  console.log(this.email)      
+handleClick = () => {
+  var persons=this.setState({persons: [{name: '', email: ''}]})
+  console.log(this.persons)      
+  
+  
   
 }
   removeAll = () => {
@@ -50,9 +40,8 @@ handleClick = () => {
         <p>Add your Todo List here</p>
      
           {this.state.persons.map(person => (
-          <li key={person}>{person.name}</li>
-        ))}
-          
+          <li key={person}>{person}</li>
+        ))}          
         
         <form onSubmit={this.handleSubmit}>      
           <input onChange={this.handleChange.bind(this)} value={this.state.name}></input>

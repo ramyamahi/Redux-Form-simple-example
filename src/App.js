@@ -9,9 +9,14 @@ import FunctionalComponent from './FunctionalComponent'
 import TodoList from './TodoList'
 import TaskDataTable from './TaskDataTable'
 import UserTable from './UserTable'
+import SearchPics from './SearchPics'
 
 
 class App extends Component {
+  onSearchSubmit(item){
+    console.log(this.item)
+  }
+
   constructor(props){
     super();
     this.state={
@@ -29,7 +34,7 @@ class App extends Component {
       
       <div className="App">
       <div>
-       <Increment/>
+       {/*<Increment/>
        <hr/>
        <Add/>
         <hr/>
@@ -43,7 +48,8 @@ class App extends Component {
        <hr/>
        <TaskDataTable/>
        <hr/>
-       <UserTable/>
+       <UserTable/>*/}
+       <SearchPics onSubmit={this.onSearchSubmit} />
       </div>
         <header>
           {/*<h1>Movie App</h1>
