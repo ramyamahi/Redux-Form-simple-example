@@ -10,19 +10,28 @@ import TodoList from './TodoList'
 import TaskDataTable from './TaskDataTable'
 import UserTable from './UserTable'
 import SearchPics from './SearchPics'
+import axios from 'axios'; 
 
 
 class App extends Component {
-  onSearchSubmit(item){
-    console.log(this.item)
+  state = {
+    images:[]
+  }
+   onSearchSubmit = async item => {
+    const response = await axios.get(
+        'https://api.unsplash.com/search/photos', 
+        { 
+          params: {query: item},
+          headers: {Authorization: 'Client-ID 6478c2fa4d0f049630f416ce2d28ff3b7d9d162f464781219a45241645e41edf'}
+        }
+        ).catch(error => {
+    console.log(error.response)
+});
+    this.setState({images: response.data.results});
+   
   }
 
-  constructor(props){
-    super();
-    this.state={
-      
-    }
-  }
+ 
 
   handleEvent(){
     //("fgg")
@@ -50,6 +59,7 @@ class App extends Component {
        <hr/>
        <UserTable/>*/}
        <SearchPics onSubmit={this.onSearchSubmit} />
+       {this.state.images.length} images
       </div>
         <header>
           {/*<h1>Movie App</h1>
