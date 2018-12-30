@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Movies from "./MoviesList"
 import Increment from "./Increment"
 import Add from "./Add"
-import './App.css';
+import './App.css'
 import VisibilityToggle from "./VisibilityToggle"
 import Indecision from './Indecision'
 import FunctionalComponent from './FunctionalComponent'
@@ -10,7 +10,7 @@ import TodoList from './TodoList'
 import TaskDataTable from './TaskDataTable'
 import UserTable from './UserTable'
 import SearchPics from './SearchPics'
-import axios from 'axios'; 
+import axios from 'axios' 
 
 
 class App extends Component {
@@ -49,16 +49,18 @@ class App extends Component {
         <hr/>
        <VisibilityToggle/>
         <hr/>
-       <FunctionalComponent/>
+       <FunctionalComponent images={this.state.images}/>
         <hr/>
        <Indecision />
        <hr/>
        <TodoList/>
        <hr/>
-       <TaskDataTable/>
+       <TaskDataTable/>*/}
        <hr/>
-       <UserTable/>*/}
+       <UserTable/>
+       
        <SearchPics onSubmit={this.onSearchSubmit} />
+       
        {this.state.images.length} images
       </div>
         <header>

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-//import { Item, Button,Image, Sidebar, Grid, Header, Segment } from 'semantic-ui-react'
+import { Item, Button,Image, Sidebar, Grid, Header, Segment } from 'semantic-ui-react'
 
 class UserTable extends Component {
   constructor(props){
     super(props);
     this.state={
       persons: [],
-      text:''
+      name:'',
+      email:''
     };
   }  
   handleChange = (event) => {
@@ -28,7 +29,7 @@ handleClick = () => {
   
 }
   removeAll = () => {
-    this.setState({persons: []})
+    this.setState({persons: [{name: '', email: ''}]})
   } 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -40,7 +41,7 @@ handleClick = () => {
         <p>Add your Todo List here</p>
      
           {this.state.persons.map(person => (
-          <li key={person}>{person}</li>
+          <li key={person}>{person => ({ name: this.name, email: this.email })}</li>
         ))}          
         
         <form onSubmit={this.handleSubmit}>      
@@ -48,7 +49,7 @@ handleClick = () => {
           <input onChange={this.handleChangeData.bind(this)} value={this.state.email}></input>
           <button onClick={this.handleClick.bind(this)}>Add Item</button>
           <button onClick={this.removeAll.bind(this)}>Remove All</button>
-        </form>
+        </form>        
     </div>
  );
 }
