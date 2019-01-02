@@ -10,6 +10,9 @@ import TodoList from './TodoList'
 import TaskDataTable from './TaskDataTable'
 import UserTable from './UserTable'
 import SearchPics from './SearchPics'
+import SemanticSample from './SemanticSample'
+import Timer from './Timer'
+
 import axios from 'axios' 
 
 
@@ -55,9 +58,13 @@ class App extends Component {
        <hr/>
        <TodoList/>
        <hr/>
-       <TaskDataTable/>*/}
+       <TaskDataTable/>
+        <SemanticSample/>*/}
        <hr/>
        <UserTable/>
+       <hr/>
+       <Timer/>
+       
        
        <SearchPics onSubmit={this.onSearchSubmit} />
        

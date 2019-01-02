@@ -13,3 +13,18 @@ code {
     monospace;
 }
 
+
+.table-style {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.table-style td, .table-style th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 50%;
+  height: 50%;
+}
+
+
