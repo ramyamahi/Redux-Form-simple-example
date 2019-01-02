@@ -11,7 +11,7 @@ import TaskDataTable from './TaskDataTable'
 import UserTable from './UserTable'
 import SearchPics from './SearchPics'
 import SemanticSample from './SemanticSample'
-import Timer from './Timer'
+import CurrentTime from './CurrentTime'
 
 import axios from 'axios' 
 
@@ -63,7 +63,7 @@ class App extends Component {
        <hr/>
        <UserTable/>
        <hr/>
-       <Timer/>
+       <CurrentTime/>
        
        
        <SearchPics onSubmit={this.onSearchSubmit} />
