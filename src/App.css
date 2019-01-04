@@ -33,3 +33,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+.sweet-alert button{
+  background-color: #0265cb !important;
+}

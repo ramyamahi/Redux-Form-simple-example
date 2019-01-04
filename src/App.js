@@ -12,8 +12,10 @@ import UserTable from './UserTable'
 import SearchPics from './SearchPics'
 import SemanticSample from './SemanticSample'
 import CurrentTime from './CurrentTime'
+//import ExpenseApp from './ExpenseApp'
 
-import axios from 'axios' 
+import axios from 'axios'
+import 'semantic-ui-css/semantic.min.css'; 
 
 
 class App extends Component {
@@ -58,17 +60,18 @@ class App extends Component {
        <hr/>
        <TodoList/>
        <hr/>
-       <TaskDataTable/>
-        <SemanticSample/>*/}
-       <hr/>
+       <TaskDataTable/>*/}
+        <SemanticSample/>
+       {/*<hr/>
        <UserTable/>
        <hr/>
        <CurrentTime/>
-       
-       
+       <hr/>*/}
+       {/*<ExpenseApp/>      
+       <hr/>
        <SearchPics onSubmit={this.onSearchSubmit} />
        
-       {this.state.images.length} images
+       {this.state.images.length} images*/}   
       </div>
         <header>
           {/*<h1>Movie App</h1>
