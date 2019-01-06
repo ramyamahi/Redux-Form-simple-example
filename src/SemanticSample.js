@@ -16,7 +16,8 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
     
   }  
   handleClick = () => {
-    notify.show('Toasty!');
+    let myColor = { background: ' #008000', text: "#FFFFFF" };
+    notify.show('Successfully added', 'custom', 5000 , myColor);
   }
   
   render() {  
@@ -50,12 +51,13 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
               title=""
               text="Are you sure?"
               onConfirm={() => this.setState({ show: false })}        
-            >     
+            > 
+            {/*<Button onCancel={() => this.setState({ show: false })}>cancel</Button>*/}  
             </SweetAlert><br/><br/>
             <Notifications> 
-              <Button onClick={this.handleClick.bind(this)}>toast</Button>
+              
             </Notifications>
-            <Button onClick={this.handleClick.bind(this)} >toast</Button>
+            <Button onClick={this.handleClick.bind(this)} >Add</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

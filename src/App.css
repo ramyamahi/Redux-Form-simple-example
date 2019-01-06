@@ -38,3 +38,6 @@
 .sweet-alert button{
   background-color: #0265cb !important;
 }
+.link-list{
+  list-style-type: none !important;
+}
