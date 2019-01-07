@@ -17,7 +17,11 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   }  
   handleClick = () => {
     let myColor = { background: ' #008000', text: "#FFFFFF" };
-    notify.show('Successfully added', 'custom', 5000 , myColor);
+    notify.show('Successfully added', 'custom', 2000 , myColor);
+  }
+  handleClick1 = () => {
+    let myColor1 = { background: ' #FF0000', text: "#FFFFFF" };
+    notify.show('Cancelled', 'custom', 2000 , myColor1);
   }
   
   render() {  
@@ -58,6 +62,7 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
               
             </Notifications>
             <Button onClick={this.handleClick.bind(this)} >Add</Button>
+            <Button onClick={this.handleClick1.bind(this)} >Cancel</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
+import './App.css' 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {createStore, combineReducers} from 'redux'
+import 'semantic-ui-css/semantic.min.css';
 import Movies from "./MoviesList"
 import Increment from "./Increment"
 import Add from "./Add"
-import './App.css'
-import VisibilityToggle from "./VisibilityToggle"
-import Indecision from './Indecision'
-import FunctionalComponent from './FunctionalComponent'
 import TodoList from './TodoList'
-import TaskDataTable from './TaskDataTable'
+import VisibilityToggle from "./VisibilityToggle"
+import FunctionalComponent from './FunctionalComponent'
 import UserTable from './UserTable'
-import SearchPics from './SearchPics'
-import SemanticSample from './SemanticSample'
 import CurrentTime from './CurrentTime'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-//import ExpenseApp from './ExpenseApp'
+import SemanticSample from './SemanticSample'
+import SearchPics from './SearchPics'
+import ExpenseApp from './ExpenseApp'
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
+import ToasterAlert from './ToasterAlert'
+import {Provider}  from 'react-redux'
+
+
+
 
 import axios from 'axios'
-import 'semantic-ui-css/semantic.min.css'; 
+
+{/*import TaskDataTable from './TaskDataTable'*/}
+{/*import Indecision from './Indecision'*/}
 
 class App extends Component {
   state = {
@@ -38,7 +46,7 @@ class App extends Component {
   render() {    
     return (    
       <Router>
-        <div className="App">
+        <div className="App">        
           <h1>My React Programs</h1>
           <ul className='link-list'>
             <li>
@@ -71,6 +79,12 @@ class App extends Component {
             <li>            
               <Link to="/SearchPics">Search Photos</Link>
             </li>
+            <li>            
+              <Link to="/ExpenseApp">Expense List</Link>
+            </li>
+            <li>            
+              <Link to="/ToasterAlert">React-Redux Toaster</Link>
+            </li>
 
           </ul>
 
@@ -84,6 +98,8 @@ class App extends Component {
           <Route exact path="/SemanticSample" component={SemanticSample} />
           {/*<Route exact path="/Indecision" component={Indecision} />*/}
           <Route exact path="/SearchPics" component={SearchPics} />
+          <Route exact path="/ExpenseApp" component={ExpenseApp} />
+          <Route exact path="/ToasterAlert" component={ToasterAlert} />
           {/*<SearchPics onSubmit={this.onSearchSubmit} />       
           {this.state.images.length} images*/}       
      

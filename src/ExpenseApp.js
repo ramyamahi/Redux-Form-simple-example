@@ -8,8 +8,8 @@ class ExpenseApp extends Component {
     this.state={
       income: '',
       detail: '',
-      expense: '',
-      currentamount: ''
+      expense: [],
+      currentamount: []
     };
   }
   getIncome = (e) => {
@@ -17,15 +17,16 @@ class ExpenseApp extends Component {
     console.log(this.state.income)
   }
   getExpenseDetail = (e) => {
-    var detail = this.setState({income: e.target.value})
+    var detail = this.setState({detail: e.target.value})
     console.log(this.state.detail)
   }
   getDailyExpense = (e) => {
-    var expense = this.setState({income: e.target.value})
+    var expense = this.setState({expense: e.target.value})
     console.log(this.state.expense)
   }
   getNow = () => {
-    var currentamount = this.setState({currentamount: Number({this.state.income}) - Number({this.state.expense})})
+    var currentamount = this.setState({currentamount: Number(this.state.income) - Number(this.state.expense)})
+    console.log(this.state.currentamount)
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -36,13 +37,27 @@ class ExpenseApp extends Component {
       <div>
         <h1>Expense Calculator</h1> 
         <form onSubmit={this.handleSubmit}>
-          Income of this Month
+          <b>Income of this Month</b>
           <input onChange={this.getIncome.bind(this)} value={this.state.income}></input><br/><br/>
-          Daily Expense List
-          <input onChange={this.getExpenseDetail.bind(this)} value={this.state.detail}></input>
-          <input onChange={this.getDailyExpense.bind(this)} value={this.state.expense}></input><br/><br/>
-          Now your Amount
-          <input onChange={this.getNow.bind(this)} value={this.state.currentamount}></input>
+          <table>
+            <tr>
+              <td>Expense List</td>
+              <td>Amount</td>
+              <td>Current amount</td>
+            </tr>
+            <tr>
+              <td>
+                <input onChange={this.getExpenseDetail.bind(this)} value={this.state.detail}></input>
+              </td>            
+              <td>
+                <input onChange={this.getDailyExpense.bind(this)} value={this.state.expense}></input>
+              </td> 
+              <td>           
+                <input onChange={this.getNow.bind(this)} value={this.state.currentamount}></input>
+                <button onClick={this.getNow.bind(this)}>Now your Amount</button>
+              </td>
+            </tr>
+          </table>
         </form>
     </div>
  );
