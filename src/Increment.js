@@ -1,5 +1,5 @@
  import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 
 class Increment extends Component {
   constructor(props){

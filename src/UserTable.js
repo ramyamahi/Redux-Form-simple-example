@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { Item, Button,Image, Sidebar, Grid, Header, Segment, Table } from 'semantic-ui-react'
 
 class UserTable extends Component {

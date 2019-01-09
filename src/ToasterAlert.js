@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import {Provider}  from 'react-redux'
@@ -23,11 +23,11 @@ class ToasterAlert extends Component {
   render() {      
     return (       
       <div>        
-        <h1>React Redux Toaster</h1>      
+        <h1>Redux Toaster</h1>      
         <Provider store={store}>
           <div>   
             <ReduxToastr
-              timeOut={20000}
+              timeOut={5000}
               newestOnTop={false}
               preventDuplicates
               position="top-center"

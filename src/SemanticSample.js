@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider } from 'semantic-ui-react'
+import './App.scss';
+import './custom.css';
+import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider, Popup, Dropdown } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import SweetAlert from 'sweetalert-react';
 import 'sweetalert/dist/sweetalert.css';
@@ -61,8 +62,28 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
             <Notifications> 
               
             </Notifications>
-            <Button onClick={this.handleClick.bind(this)} >Add</Button>
-            <Button onClick={this.handleClick1.bind(this)} >Cancel</Button>
+            <Button onClick={this.handleClick.bind(this)} className='add-button'>Add</Button>
+            <Button onClick={this.handleClick1.bind(this)} >Cancel</Button>                
+          </Grid.Column>          
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <Menu vertical>
+              <Menu.Item>Home</Menu.Item>
+              <Dropdown text='Messages' className='link item'>
+                <Dropdown.Menu>
+                  <Dropdown.Item>Inbox</Dropdown.Item>
+                  <Dropdown.Item>Starred</Dropdown.Item>
+                  <Dropdown.Item>Sent Mail</Dropdown.Item>
+                  <Dropdown.Item>Drafts (143)</Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item>Spam (1009)</Dropdown.Item>
+                  <Dropdown.Item>Trash</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Menu.Item>Browse</Menu.Item>
+              <Menu.Item>Help</Menu.Item>
+            </Menu>
           </Grid.Column>
         </Grid.Row>
       </Grid>

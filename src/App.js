@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './App.css' 
+import './App.scss' 
+import './styles.scss' 
+import './custom.css' 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {createStore, combineReducers} from 'redux'
 import 'semantic-ui-css/semantic.min.css';
@@ -47,7 +49,7 @@ class App extends Component {
     return (    
       <Router>
         <div className="App">        
-          <h1>My React Programs</h1>
+          <h1 className='app-head'>My React Programs</h1>
           <ul className='link-list'>
             <li>
               <Link to="/Increment">Increment and Decrement</Link>
@@ -83,7 +85,7 @@ class App extends Component {
               <Link to="/ExpenseApp">Expense List</Link>
             </li>
             <li>            
-              <Link to="/ToasterAlert">React-Redux Toaster</Link>
+              <Link to="/ToasterAlert">React-Redux Toastr</Link>
             </li>
 
           </ul>

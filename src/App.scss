@@ -1,6 +1,9 @@
+$primary-color: #000000;
+$white-color: #FFFFFF;
+
+
 .App {
-  text-align: center;
-}
+  text-align: center;}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -40,4 +43,8 @@
 }
 .link-list{
   list-style-type: none !important;
+}
+
+.displaynone {
+    display: none !important;
 }
