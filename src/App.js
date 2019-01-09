@@ -89,7 +89,7 @@ class App extends Component {
             </li>
 
           </ul>
-
+          <hr/>
           <Route exact path="/Increment" component={Increment} />
           <Route exact path="/Add" component={Add} />
           <Route exact path="/TodoList" component={TodoList} />
