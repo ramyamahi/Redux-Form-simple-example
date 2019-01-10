@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import './App.scss';
-import './custom.css';
-import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider, Popup, Dropdown, Icon, Breadcrumb } from 'semantic-ui-react'
+import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider, Popup, Dropdown, Icon, Breadcrumb, Loader, Dimmer } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import SweetAlert from 'sweetalert-react';
 import 'sweetalert/dist/sweetalert.css';
 import Notifications, {notify} from 'react-notify-toast';
-import { NavLink } from 'react-router-dom';
 
 class SemanticSample extends Component {
   state = { activeItem: 'home' }
@@ -68,24 +66,7 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
           </Grid.Column>          
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column>
-          <NavLink to='./VisibilityToggle' >            
-            <span style={{color: '#FFFFFF'}}>Visibility Toggle</span>
-          </NavLink>
-          <NavLink to='./Increment' >            
-            <span>Increment</span>
-          </NavLink><br/>          
-          <Breadcrumb style={{backgroundColor: '#FFFFFF'}}>
-            <Breadcrumb.Section link><NavLink to='./VisibilityToggle' >            
-            <span>Visibility Toggle</span>
-          </NavLink></Breadcrumb.Section>
-            <Breadcrumb.Divider />
-            <Breadcrumb.Section link><NavLink to='./Increment' >            
-            <span>Increment</span>
-          </NavLink></Breadcrumb.Section>
-            <Breadcrumb.Divider />
-            <Breadcrumb.Section active style={{color: '#000000'}}>Semantic Sample</Breadcrumb.Section>
-          </Breadcrumb>
+          <Grid.Column>         
             <Menu vertical>
               <Menu.Item>Home</Menu.Item>
               <Dropdown text='Messages' className='link item'>
@@ -102,6 +83,15 @@ handleItemClick = (e, { name }) => this.setState({ activeItem: name })
               <Menu.Item>Browse</Menu.Item>
               <Menu.Item>Help</Menu.Item>
             </Menu>
+            <Segment>
+              <Dimmer active inverted>
+                <Loader inverted>Loading</Loader>
+              </Dimmer>
+              <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+            </Segment>
+
+
+
           </Grid.Column>          
         </Grid.Row>
       </Grid>

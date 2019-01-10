@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss' 
+import 'normalize.css/normalize.css'
 import './styles.scss' 
-import './custom.css' 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {createStore, combineReducers} from 'redux'
 import 'semantic-ui-css/semantic.min.css';
@@ -14,6 +14,7 @@ import FunctionalComponent from './FunctionalComponent'
 import UserTable from './UserTable'
 import CurrentTime from './CurrentTime'
 import SemanticSample from './SemanticSample'
+import BreadcrumbNav from './BreadcrumbNav'
 import SearchPics from './SearchPics'
 import ExpenseApp from './ExpenseApp'
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
@@ -75,6 +76,9 @@ class App extends Component {
             <li>            
               <Link to="/SemanticSample">Semantic Sample</Link>
             </li>
+            <li>            
+              <Link to="/BreadcrumbNav">Navlink for Breadcrumb</Link>
+            </li>
             {/*<li>            
               <Link to="/Indecision">Indecision</Link>
             </li>*/}
@@ -87,7 +91,6 @@ class App extends Component {
             <li>            
               <Link to="/ToasterAlert">React-Redux Toastr</Link>
             </li>
-
           </ul>
           <hr/>
           <Route exact path="/Increment" component={Increment} />
@@ -98,6 +101,7 @@ class App extends Component {
           <Route exact path="/UserTable" component={UserTable} />
           <Route exact path="/CurrentTime" component={CurrentTime} />
           <Route exact path="/SemanticSample" component={SemanticSample} />
+          <Route exact path="/BreadcrumbNav" component={BreadcrumbNav} />
           {/*<Route exact path="/Indecision" component={Indecision} />*/}
           <Route exact path="/SearchPics" component={SearchPics} />
           <Route exact path="/ExpenseApp" component={ExpenseApp} />

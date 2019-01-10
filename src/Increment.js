@@ -24,7 +24,7 @@ class Increment extends Component {
       
       <div>
         <h1>Increment and Decrement</h1>
-        <button onClick={this.add.bind(this)}>increment</button>        
+        <button onClick={this.add.bind(this)}>Increment</button>        
         <input value={this.state.data}></input>
          <button onClick={this.sub.bind(this)}>Decrement</button>
         </div>

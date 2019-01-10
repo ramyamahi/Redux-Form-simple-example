@@ -32,10 +32,10 @@ class ToasterAlert extends Component {
               preventDuplicates
               position="top-center"
               transitionIn="fadeIn"
-              transitionOut="fadeOut"                 
+              transitionOut="fadeOut"                                            
             />    
             <button
-            onClick={() => toastr.success('Successfully added')}
+            onClick={() => toastr.success('Tenant added', 'Successfully')}
             type="button">Add</button>
           </div>
         </Provider>        
