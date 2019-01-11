@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss' 
 import 'normalize.css/normalize.css'
 import './styles.scss' 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import {createStore, combineReducers} from 'redux'
 import 'semantic-ui-css/semantic.min.css';
 import Movies from "./MoviesList"
@@ -20,6 +20,8 @@ import ExpenseApp from './ExpenseApp'
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import ToasterAlert from './ToasterAlert'
 import {Provider}  from 'react-redux'
+import NotFound  from './NotFound'
+
 
 
 
@@ -93,22 +95,25 @@ class App extends Component {
             </li>
           </ul>
           <hr/>
-          <Route exact path="/Increment" component={Increment} />
-          <Route exact path="/Add" component={Add} />
-          <Route exact path="/TodoList" component={TodoList} />
-          <Route exact path="/VisibilityToggle" component={VisibilityToggle} />
-          <Route exact path="/FunctionalComponent" component={FunctionalComponent} images={this.state.images}/>
-          <Route exact path="/UserTable" component={UserTable} />
-          <Route exact path="/CurrentTime" component={CurrentTime} />
-          <Route exact path="/SemanticSample" component={SemanticSample} />
-          <Route exact path="/BreadcrumbNav" component={BreadcrumbNav} />
-          {/*<Route exact path="/Indecision" component={Indecision} />*/}
-          <Route exact path="/SearchPics" component={SearchPics} />
-          <Route exact path="/ExpenseApp" component={ExpenseApp} />
-          <Route exact path="/ToasterAlert" component={ToasterAlert} />
-          {/*<SearchPics onSubmit={this.onSearchSubmit} />       
-          {this.state.images.length} images*/}       
-     
+          <Switch>
+            <Route exact path="/" component={App} />
+            <Route exact path="/Increment" component={Increment} />
+            <Route exact path="/Add" component={Add} />
+            <Route exact path="/TodoList" component={TodoList} />
+            <Route exact path="/VisibilityToggle" component={VisibilityToggle} />
+            <Route exact path="/FunctionalComponent" component={FunctionalComponent} images={this.state.images}/>
+            <Route exact path="/UserTable" component={UserTable} />
+            <Route exact path="/CurrentTime" component={CurrentTime} />
+            <Route exact path="/SemanticSample" component={SemanticSample} />
+            <Route exact path="/BreadcrumbNav" component={BreadcrumbNav} />
+            {/*<Route exact path="/Indecision" component={Indecision} />*/}
+            <Route exact path="/SearchPics" component={SearchPics} />
+            <Route exact path="/ExpenseApp" component={ExpenseApp} />
+            <Route exact path="/ToasterAlert" component={ToasterAlert} />
+            {/*<SearchPics onSubmit={this.onSearchSubmit} />       
+            {this.state.images.length} images*/} 
+            <Route component={NotFound}/>      
+          </Switch>
         </div>
       </Router>
     );
