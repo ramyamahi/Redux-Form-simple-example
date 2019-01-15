@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss' 
 import 'normalize.css/normalize.css'
 import './styles.scss' 
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, NavLink } from "react-router-dom";
 import {createStore, combineReducers} from 'redux'
 import 'semantic-ui-css/semantic.min.css';
 import Movies from "./MoviesList"
@@ -55,48 +55,48 @@ class App extends Component {
           <h1 className='app-head'>My React Programs</h1>
           <ul className='link-list'>
             <li>
-              <Link to="/Increment">Increment and Decrement</Link>
+              <NavLink to="/Increment" activeClassName='is-active'>Increment and Decrement</NavLink>
             </li>
             <li>            
-              <Link to="/Add">Arithmetic Operations(+,-,*,/)</Link>
+              <NavLink to="/Add" activeClassName='is-active'>Arithmetic Operations(+,-,*,/)</NavLink>
             </li>
             <li>
-              <Link to="/TodoList">Todo List</Link>
+              <NavLink to="/TodoList" activeClassName='is-active'>Todo List</NavLink>
             </li>
             <li>            
-              <Link to="/VisibilityToggle">Visibility Toggle</Link>
+              <NavLink to="/VisibilityToggle" activeClassName='is-active'>Visibility Toggle</NavLink>
             </li>
             <li>            
-              <Link to="/FunctionalComponent">Functional Component</Link>
+              <NavLink to="/FunctionalComponent" activeClassName='is-active'>Functional Component</NavLink>
             </li>            
             <li>            
-              <Link to="/UserTable">Data Table</Link>
+              <NavLink to="/UserTable" activeClassName='is-active'>Data Table</NavLink>
             </li>
             <li>            
-              <Link to="/CurrentTime">Click and Get current Time</Link>
+              <NavLink to="/CurrentTime" activeClassName='is-active'>Click and Get current Time</NavLink>
             </li>
             <li>            
-              <Link to="/SemanticSample">Semantic Sample</Link>
+              <NavLink to="/SemanticSample" activeClassName='is-active'>Semantic Sample</NavLink>
             </li>
             <li>            
-              <Link to="/BreadcrumbNav">Navlink for Breadcrumb</Link>
+              <NavLink to="/BreadcrumbNav" activeClassName='is-active'>Navlink for Breadcrumb</NavLink>
             </li>
             {/*<li>            
               <Link to="/Indecision">Indecision</Link>
             </li>*/}
             <li>            
-              <Link to="/SearchPics">Search Photos</Link>
+              <NavLink to="/SearchPics" activeClassName='is-active'>Search Photos</NavLink>
             </li>
             <li>            
-              <Link to="/ExpenseApp">Expense List</Link>
+              <NavLink to="/ExpenseApp" activeClassName='is-active'>Expense List</NavLink>
             </li>
             <li>            
-              <Link to="/ToasterAlert">React-Redux Toastr</Link>
+              <NavLink to="/ToasterAlert" activeClassName='is-active'>React-Redux Toastr</NavLink>
             </li>
           </ul>
           <hr/>
           <Switch>
-            <Route exact path="/" component={App} />
+            <Route exact path="/" />
             <Route exact path="/Increment" component={Increment} />
             <Route exact path="/Add" component={Add} />
             <Route exact path="/TodoList" component={TodoList} />

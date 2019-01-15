@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
-import { Item, Button,Image, Sidebar, Grid, Header, Segment, Menu, MenuItem, Form, Label, Divider } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css';
 import {Provider}  from 'react-redux'
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import {createStore, combineReducers, bindActionCreators} from 'redux'
@@ -43,5 +40,13 @@ class ToasterAlert extends Component {
     );
   }
 }
+
+{/* Toastr methods*/}
+{/*toastr.success('Title', 'Message', toastrOptions)
+toastr.info('The message', toastrOptions)
+toastr.warning('The title', 'The message')
+toastr.error('The message')
+toastr.removeByType('error') // Remove all toastrs with the type error.
+toastr.remove('123')*/} 
 
 export default ToasterAlert;
