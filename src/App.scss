@@ -45,9 +45,12 @@ $white-color: #FFFFFF;
 }
 
 .displaynone {
-    display: none !important;
+  display: none !important;
 }
 
 .is-active{
-  color: white !important;
+  color: $white-color !important;
+}
+.error-msg{
+  color:  #FF0000 !important;
 }

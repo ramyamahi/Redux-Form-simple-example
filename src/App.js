@@ -17,6 +17,7 @@ import SemanticSample from './SemanticSample'
 import BreadcrumbNav from './BreadcrumbNav'
 import SearchPics from './SearchPics'
 import ExpenseApp from './ExpenseApp'
+import SignUp from './SignUp'
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import ToasterAlert from './ToasterAlert'
 import {Provider}  from 'react-redux'
@@ -93,6 +94,10 @@ class App extends Component {
             <li>            
               <NavLink to="/ToasterAlert" activeClassName='is-active'>React-Redux Toastr</NavLink>
             </li>
+            <li>            
+              <NavLink to="/SignUp" activeClassName='is-active'>Sign Up</NavLink>
+            </li>
+
           </ul>
           <hr/>
           <Switch>
@@ -110,6 +115,7 @@ class App extends Component {
             <Route exact path="/SearchPics" component={SearchPics} />
             <Route exact path="/ExpenseApp" component={ExpenseApp} />
             <Route exact path="/ToasterAlert" component={ToasterAlert} />
+            <Route exact path="/SignUp" component={SignUp} />
             {/*<SearchPics onSubmit={this.onSearchSubmit} />       
             {this.state.images.length} images*/} 
             <Route component={NotFound}/>      
