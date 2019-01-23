@@ -20,6 +20,7 @@ import ExpenseApp from './ExpenseApp'
 import SignUp from './SignUp'
 import LifecycleSample from './LifecycleSample'
 import ApiCall from './ApiCall'
+import ProductList from './ProductList'
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import ToasterAlert from './ToasterAlert'
 import {Provider}  from 'react-redux'
@@ -105,6 +106,10 @@ class App extends Component {
             <li>            
               <NavLink to="/LifecycleSample" activeClassName='is-active'>LifecycleSample</NavLink>
             </li>
+            <li>            
+              <NavLink to="/ProductList" activeClassName='is-active'>Shopping Cart</NavLink>
+            </li>
+
 
 
           </ul>
@@ -127,6 +132,7 @@ class App extends Component {
             <Route exact path="/SignUp" component={SignUp} />
             <Route exact path="/ApiCall" component={ApiCall} />
             <Route exact path="/LifecycleSample" component={LifecycleSample} />
+            <Route exact path="/ProductList" component={ProductList} />
             {/*<SearchPics onSubmit={this.onSearchSubmit} />       
             {this.state.images.length} images*/} 
             <Route component={NotFound}/>      
