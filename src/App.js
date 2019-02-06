@@ -21,6 +21,8 @@ import SignUp from './SignUp'
 import LifecycleSample from './LifecycleSample'
 import ApiCall from './ApiCall'
 import ProductList from './ProductList'
+import MultiSelectOption from './MultiSelectOption'
+
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import ToasterAlert from './ToasterAlert'
 import {Provider}  from 'react-redux'
@@ -56,7 +58,7 @@ class App extends Component {
     return (    
       <Router>
         <div className="App">        
-          <h1 className='app-head'>My React Programs</h1>
+          {/*<h1 className='app-head'>My React Programs</h1>*/}
           <ul className='link-list'>
             <li>
               <NavLink to="/Increment" activeClassName='is-active'>Increment and Decrement</NavLink>
@@ -100,14 +102,17 @@ class App extends Component {
             <li>            
               <NavLink to="/SignUp" activeClassName='is-active'>Sign Up</NavLink>
             </li>
-             {/*<li>            
+             <li>            
               <NavLink to="/ApiCall" activeClassName='is-active'>API Call</NavLink>
-            </li>*/}
+            </li>
             <li>            
               <NavLink to="/LifecycleSample" activeClassName='is-active'>LifecycleSample</NavLink>
             </li>
             <li>            
               <NavLink to="/ProductList" activeClassName='is-active'>Shopping Cart</NavLink>
+            </li>
+            <li>            
+              <NavLink to="/MultiSelectOption" activeClassName='is-active'>MultiSelectOption</NavLink>
             </li>
 
 
@@ -133,6 +138,7 @@ class App extends Component {
             <Route exact path="/ApiCall" component={ApiCall} />
             <Route exact path="/LifecycleSample" component={LifecycleSample} />
             <Route exact path="/ProductList" component={ProductList} />
+            <Route exact path="/MultiSelectOption" component={MultiSelectOption} />
             {/*<SearchPics onSubmit={this.onSearchSubmit} />       
             {this.state.images.length} images*/} 
             <Route component={NotFound}/>      
