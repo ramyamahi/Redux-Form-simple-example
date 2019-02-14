@@ -20,8 +20,14 @@ import ExpenseApp from './ExpenseApp'
 import SignUp from './SignUp'
 import LifecycleSample from './LifecycleSample'
 import ApiCall from './ApiCall'
+import IncrementHooks from './IncrementHooks'
 import ProductList from './ProductList'
 import MultiSelectOption from './MultiSelectOption'
+import Calendar from './Calendar'
+import MainForm from './MainForm'
+//import MultiStep from './MultiStep'
+//import MultiformProgress from './MultiformProgress'
+import SkipAStep from './SkipAStep'
 
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import ToasterAlert from './ToasterAlert'
@@ -102,8 +108,11 @@ class App extends Component {
             <li>            
               <NavLink to="/SignUp" activeClassName='is-active'>Sign Up</NavLink>
             </li>
-             <li>            
+            <li>            
               <NavLink to="/ApiCall" activeClassName='is-active'>API Call</NavLink>
+            </li>
+            <li>            
+              <NavLink to="/IncrementHooks" activeClassName='is-active'>Hooks - Increment program</NavLink>
             </li>
             <li>            
               <NavLink to="/LifecycleSample" activeClassName='is-active'>LifecycleSample</NavLink>
@@ -114,6 +123,21 @@ class App extends Component {
             <li>            
               <NavLink to="/MultiSelectOption" activeClassName='is-active'>MultiSelectOption</NavLink>
             </li>
+            <li>            
+              <NavLink to="/Calendar" activeClassName='is-active'>Calendar</NavLink>
+            </li>
+            <li>            
+              <NavLink to="/MainForm" activeClassName='is-active'>Main Form</NavLink>
+            </li>
+            {/*<li>            
+              <NavLink to="/MultiStep" activeClassName='is-active'>MultiStep</NavLink>
+            </li>*/}
+            <li>            
+              <NavLink to="/SkipAStep" activeClassName='is-active'>Skip a step</NavLink>
+            </li>
+            {/*<li>            
+              <NavLink to="/MultiformProgress" activeClassName='is-active'>MultiformProgress</NavLink>
+            </li>*/}
 
 
 
@@ -136,9 +160,15 @@ class App extends Component {
             <Route exact path="/ToasterAlert" component={ToasterAlert} />
             <Route exact path="/SignUp" component={SignUp} />
             <Route exact path="/ApiCall" component={ApiCall} />
+            <Route exact path="/IncrementHooks" component={IncrementHooks} />
             <Route exact path="/LifecycleSample" component={LifecycleSample} />
             <Route exact path="/ProductList" component={ProductList} />
             <Route exact path="/MultiSelectOption" component={MultiSelectOption} />
+            <Route exact path="/Calendar" component={Calendar} />
+            <Route exact path="/MainForm" component={MainForm} />
+            {/*<Route exact path="/MultiStep" component={MultiStep} />*/}
+            <Route exact path="/SkipAStep" component={SkipAStep} />
+            {/*<Route exact path="/MultiformProgress" component={MultiformProgress} />*/}
             {/*<SearchPics onSubmit={this.onSearchSubmit} />       
             {this.state.images.length} images*/} 
             <Route component={NotFound}/>      
