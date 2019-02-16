@@ -25,6 +25,7 @@ import ProductList from './ProductList'
 import MultiSelectOption from './MultiSelectOption'
 import Calendar from './Calendar'
 import MainForm from './MainForm'
+import MultiCarousel from './MultiCarousel'
 //import MultiStep from './MultiStep'
 //import MultiformProgress from './MultiformProgress'
 import SkipAStep from './SkipAStep'
@@ -129,6 +130,9 @@ class App extends Component {
             <li>            
               <NavLink to="/MainForm" activeClassName='is-active'>Main Form</NavLink>
             </li>
+            <li>            
+              <NavLink to="/MultiCarousel" activeClassName='is-active'>Multi Carousel</NavLink>
+            </li>
             {/*<li>            
               <NavLink to="/MultiStep" activeClassName='is-active'>MultiStep</NavLink>
             </li>*/}
@@ -166,6 +170,7 @@ class App extends Component {
             <Route exact path="/MultiSelectOption" component={MultiSelectOption} />
             <Route exact path="/Calendar" component={Calendar} />
             <Route exact path="/MainForm" component={MainForm} />
+            <Route exact path="/MultiCarousel" component={MultiCarousel} />
             {/*<Route exact path="/MultiStep" component={MultiStep} />*/}
             <Route exact path="/SkipAStep" component={SkipAStep} />
             {/*<Route exact path="/MultiformProgress" component={MultiformProgress} />*/}
