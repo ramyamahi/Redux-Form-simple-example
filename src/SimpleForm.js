@@ -2,22 +2,16 @@ import React from 'react'
 import { Field, FieldArray, reduxForm } from 'redux-form'
 import { Label, Form, Button, Grid, Icon } from 'semantic-ui-react'
 
-class SimpleFormArray extends React.Component {
+class SimpleForm extends React.Component {
 
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props
 
     return (    
-      <Form onSubmit={handleSubmit}>        
-         
-          <Field label="First Name" name="firstName" component={renderRequiredField} type="text" placeholder="First Name"/>
-        
-        <Form.Group> 
-          <Field label="Last Name" name="lastName" component={renderRequiredField} type="text" placeholder="Last Name"/>
-        </Form.Group>   
-        <Form.Group> 
-          <Field label="Email" name="email" component={renderRequiredField} type="email" placeholder="Email"/>
-        </Form.Group>                 
+      <Form onSubmit={handleSubmit}>  
+        <Field label="First Name" name="firstName" component={renderRequiredField} type="text" placeholder="First Name"/>
+          <Field label="Last Name" name="lastName" component={renderRequiredField} type="text" placeholder="Last Name"/> 
+          <Field label="Email" name="email" component={renderRequiredField} type="email" placeholder="Email"/>                 
         <FieldArray name="interest" component={renderInterest} />
         <div>
           <label>Sex</label>
@@ -99,6 +93,6 @@ const renderInterest = ({ fields, meta: { error } }) => (
 )
 
 export default reduxForm({
-  form: 'SimpleFormArray',
+  form: 'SimpleForm',
   validate 
-})(SimpleFormArray)
+})(SimpleForm)
