@@ -10,8 +10,8 @@ class SimpleForm extends React.Component {
     return (    
       <Form onSubmit={handleSubmit}>  
         <Field label="First Name" name="firstName" component={renderRequiredField} type="text" placeholder="First Name"/>
-          <Field label="Last Name" name="lastName" component={renderRequiredField} type="text" placeholder="Last Name"/> 
-          <Field label="Email" name="email" component={renderRequiredField} type="email" placeholder="Email"/>                 
+        <Field label="Last Name" name="lastName" component={renderRequiredField} type="text" placeholder="Last Name"/> 
+        <Field label="Email" name="email" component={renderRequiredField} type="email" placeholder="Email"/>                 
         <FieldArray name="interest" component={renderInterest} />
         <div>
           <label>Sex</label>
