@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@kenshooui/react-multi-select": "^1.0.70",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "eslint-plugin-react-hooks": "^1.0.1",
     "multi-select-react": "^0.1.8",
     "node-sass": "^4.11.0",
