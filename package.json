@@ -7,7 +7,7 @@
     "axios": "^0.18.0",
     "eslint-plugin-react-hooks": "^1.0.1",
     "multi-select-react": "^0.1.8",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "rc-progress": "^2.3.0",
     "rc-time-picker": "^3.6.2",
